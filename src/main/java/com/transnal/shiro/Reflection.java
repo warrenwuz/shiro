@@ -28,4 +28,10 @@ public class Reflection {
             logger.info("methods",methods);
             return methods;
     }
+
+    public static void main(String[] args) {
+        Set<String> exploreMethods=analyze(Explore.class);
+        Set<String> enumMethods=analyze(Enum.class);
+
+    }
 }
