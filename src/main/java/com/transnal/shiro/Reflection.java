@@ -17,21 +17,26 @@ public class Reflection {
         logger.info("------------------------------");
         logger.info("Interfaces:");
         for (Type type:enumCLass.getGenericInterfaces()){
-            logger.info("Type",type);
+            logger.info(type.toString());
         }
-            logger.info("Base",enumCLass.getSuperclass());
+            logger.info("Base:"+enumCLass.getSuperclass().toString());
             logger.info("Methods:");
             Set<String> methods=new TreeSet<>();
             for (Method m:enumCLass.getMethods()){
                 methods.add(m.getName());
             }
-            logger.info("methods",methods);
+            logger.info(methods.toString());
             return methods;
     }
 
     public static void main(String[] args) {
         Set<String> exploreMethods=analyze(Explore.class);
         Set<String> enumMethods=analyze(Enum.class);
+        logger.info("Explore.containAll(Enum)?"+exploreMethods.containsAll(enumMethods));
+        logger.info("Explore.removeAll(Enum):");
+        exploreMethods.removeAll(enumMethods);
+        logger.info(exploreMethods.toString());
+
 
     }
 }
