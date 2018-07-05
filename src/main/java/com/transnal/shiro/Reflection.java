@@ -11,6 +11,13 @@ import java.util.TreeSet;
 enum Explore{
     HERE,THERE
 }
+/**
+ *@ClassName CartoonCharacter
+ *@Desciption enum的方法values和value of 都是编译器添加的方法
+ *@author   wuzhe1159@163.com
+ *@Date     2018年7月1日
+ *@Version  1.0
+ */
 public class Reflection {
     private static Logger logger= LoggerFactory.getLogger(Reflection.class);
     public  static Set<String> analyze(Class<?> enumCLass){
