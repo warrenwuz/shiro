@@ -32,6 +32,14 @@ public class IntegerTest
         logger.info("i|j=" + y);
         //将10进制转换为2进制的过程
         logger.info(Integer.parseInt("1000",2)+"");
-
+        //0001 000100
+        logger.info("1<<2="+(1<<2));
+        logger.info("1>>2="+(1>>2));
+       double above=11.7,below=0.4;
+       float fabove=0.7f,fbelow=0.4f;
+       logger.info("(int)above"+(int)above);
+       logger.info("(int)below"+(int)below);
+        logger.info("(int)fabove"+(int)fabove);
+        logger.info("(int)fbelow"+(int)fbelow);
     }
 }
