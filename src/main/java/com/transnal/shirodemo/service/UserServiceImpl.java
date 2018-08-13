@@ -1,5 +1,6 @@
 package com.transnal.shirodemo.service;
 
+import com.transnal.shirodemo.dao.UserDao;
 import com.transnal.shirodemo.entity.User;
 
 import java.util.Set;
@@ -16,14 +17,16 @@ import java.util.Set;
  * @date 2018-07-18 18:04
  */
 public class UserServiceImpl implements UserService{
-    private UserDao userDao = new UserDaoImpl();
+    //private UserDao userDao = new UserDaoImpl();
+    /**
+     * 加密密码
+     */
     private PasswordHelper passwordHelper = new PasswordHelper();
     @Override
     public User createUser(User user) {
         //加密密码
-        PasswordHelper passwordHelper;
         passwordHelper.encryptPassword(user);
-        return userDao.createUser(user);
+        return   null;
     }
 
     @Override
