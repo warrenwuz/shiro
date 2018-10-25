@@ -5,5 +5,7 @@ package com.warren.spring.lifecycle;
  * @author  warren
  */
 public class SpringLifeCycle {
+    public static void main(String[] args) {
 
+    }
 }
